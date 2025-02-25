@@ -1,10 +1,9 @@
 ﻿using FluentAssertions;
 using VehicleModel;
-using VehicleModelTests.Util;
 
 namespace VehicleModelTests;
 
-public class CarTests
+public class PassengerVehicleTests
 {
     [Fact]
     public void FillTank_OnCalled_FuelLevelIsEqualToFuelCap()
@@ -21,6 +20,9 @@ public class CarTests
     [InlineData(100, 6, 100, RoadType.CityRoad)]
     [InlineData(100, 6, 100, RoadType.Highway)]
     [InlineData(50, 6, 60, RoadType.Offroad)]
+    [InlineData(50, 6, 60, RoadType.Backroad)]
+    [InlineData(0, 6, 0, RoadType.CityRoad)]
+    [InlineData(27, 10, 2, RoadType.Highway)]
     public void Drive_GivenDistanceAndDrivingMode_ReturnsCorrectConsumptionAndTime(double distanceKilometer, double carBaseConsumption, double carBaseSpeed, RoadType roadType)
     {
         var car = TestingHelper.VehicleBuilder.Start()

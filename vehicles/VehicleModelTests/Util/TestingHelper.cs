@@ -1,6 +1,6 @@
 ﻿using VehicleModel;
 
-namespace VehicleModelTests.Util;
+namespace VehicleModelTests;
 
 public class TestingHelper
 {
