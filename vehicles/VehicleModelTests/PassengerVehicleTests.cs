@@ -23,7 +23,7 @@ public class PassengerVehicleTests
     [InlineData(50, 6, 60, RoadType.Backroad)]
     [InlineData(0, 6, 0, RoadType.CityRoad)]
     [InlineData(27, 10, 2, RoadType.Highway)]
-    public void Drive_GivenDistanceAndDrivingMode_ReturnsCorrectConsumptionAndTime(double distanceKilometer, double carBaseConsumption, double carBaseSpeed, RoadType roadType)
+    public void Drive_GivenConstructionAndDrivingParams_ReturnsCorrectConsumptionAndTimeAndSetsValues(double distanceKilometer, double carBaseConsumption, double carBaseSpeed, RoadType roadType)
     {
         var car = TestingHelper.VehicleBuilder.Start()
             .WithSpeed(carBaseSpeed)
@@ -37,5 +37,7 @@ public class PassengerVehicleTests
         
         consumption.Should().Be(expectedConsumption, "the consumption of the drive should be equal to the expected consumption.");
         time.Should().Be(TimeSpan.FromHours(expectedTimeHours), "the time of the drive should be equal to the expected time.");
+        
+        car.FuelLevel.Should().Be(car.FuelCap - expectedConsumption, "the fuel level should be equal to remaining fuel in the tank.");
     }
 }
