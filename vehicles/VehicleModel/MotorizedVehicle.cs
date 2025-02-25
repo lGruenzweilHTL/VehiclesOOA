@@ -1,6 +1,6 @@
 namespace VehicleModel;
 
-public abstract class MotorizedVehicle
+public abstract class MotorizedVehicle : Vehicle
 {
     public abstract int FuelCap { get; protected set; }
     public abstract int FuelLevel { get; protected set; }

@@ -5523,11 +5523,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModelTests/VehicleModelTests.csproj",
+      "projectUniqueName": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModelTests/VehicleModelTests.csproj",
       "projectName": "VehicleModelTests",
-      "projectPath": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModelTests/VehicleModelTests.csproj",
+      "projectPath": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModelTests/VehicleModelTests.csproj",
       "packagesPath": "/home/lukas/.nuget/packages/",
-      "outputPath": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModelTests/obj/",
+      "outputPath": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModelTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/lukas/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hHQQY06wLvI=",
+  "dgSpecHash": "OyhDocR3odM=",
   "success": true,
-  "projectFilePath": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModelTests/VehicleModelTests.csproj",
+  "projectFilePath": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModelTests/VehicleModelTests.csproj",
   "expectedPackageFiles": [
     "/home/lukas/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/home/lukas/.nuget/packages/microsoft.codecoverage/17.6.0/microsoft.codecoverage.17.6.0.nupkg.sha512",

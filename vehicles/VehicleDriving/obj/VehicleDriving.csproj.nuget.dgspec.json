@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleDriving/VehicleDriving.csproj": {}
+    "/home/lukas/Github/VehiclesOOA/vehicles/VehicleDriving/VehicleDriving.csproj": {}
   },
   "projects": {
-    "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleDriving/VehicleDriving.csproj": {
+    "/home/lukas/Github/VehiclesOOA/vehicles/VehicleDriving/VehicleDriving.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleDriving/VehicleDriving.csproj",
+        "projectUniqueName": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleDriving/VehicleDriving.csproj",
         "projectName": "VehicleDriving",
-        "projectPath": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleDriving/VehicleDriving.csproj",
+        "projectPath": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleDriving/VehicleDriving.csproj",
         "packagesPath": "/home/lukas/.nuget/packages/",
-        "outputPath": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleDriving/obj/",
+        "outputPath": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleDriving/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/lukas/.nuget/NuGet/NuGet.Config"

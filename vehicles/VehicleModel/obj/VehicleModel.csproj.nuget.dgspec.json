@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModel/VehicleModel.csproj": {}
+    "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModel/VehicleModel.csproj": {}
   },
   "projects": {
-    "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModel/VehicleModel.csproj": {
+    "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModel/VehicleModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModel/VehicleModel.csproj",
+        "projectUniqueName": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModel/VehicleModel.csproj",
         "projectName": "VehicleModel",
-        "projectPath": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModel/VehicleModel.csproj",
+        "projectPath": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModel/VehicleModel.csproj",
         "packagesPath": "/home/lukas/.nuget/packages/",
-        "outputPath": "/home/lukas/Github/HTL-Leonding-Year2/POSEOO/vehicles/VehicleModel/obj/",
+        "outputPath": "/home/lukas/Github/VehiclesOOA/vehicles/VehicleModel/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/lukas/.nuget/NuGet/NuGet.Config"
