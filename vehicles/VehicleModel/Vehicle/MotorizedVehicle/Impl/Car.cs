@@ -1,4 +1,6 @@
-﻿namespace VehicleModel;
+﻿using System;
+
+namespace VehicleModel;
 
 public class Car : MotorizedVehicle
 {

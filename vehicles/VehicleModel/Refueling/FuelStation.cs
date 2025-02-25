@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace VehicleModel;
 
 public abstract class FuelStation

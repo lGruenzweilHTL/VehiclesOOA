@@ -1,4 +1,6 @@
-﻿namespace VehicleModel;
+﻿using System;
+
+namespace VehicleModel;
 
 public abstract class Vehicle
 {
