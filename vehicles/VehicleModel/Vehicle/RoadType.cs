@@ -1,6 +1,6 @@
 namespace VehicleModel;
 
-public enum DrivingMode
+public enum RoadType
 {
     CityRoad, Highway, Backroad, Offroad
 }
