@@ -33,7 +33,7 @@ public class PassengerVehicleTests
         var (consumption, time) = car.Drive(distanceKilometer, roadType);
 
         var expectedConsumption = carBaseConsumption * TestingHelper.Constants.ConsumptionMultiplier.GetConsumptionMultiplier(roadType);
-        var expectedTimeHours = distanceKilometer / (carBaseSpeed * TestingHelper.Constants.SpeedMultiplier.GetSpeedMultiplier(roadType));
+        var expectedTimeHours = carBaseSpeed == 0 ? 0 : distanceKilometer / (carBaseSpeed * TestingHelper.Constants.SpeedMultiplier.GetSpeedMultiplier(roadType));        
         
         consumption.Should().Be(expectedConsumption, "the consumption of the drive should be equal to the expected consumption.");
         time.Should().Be(TimeSpan.FromHours(expectedTimeHours), "the time of the drive should be equal to the expected time.");
