@@ -13,7 +13,7 @@ public class PassengerVehicleTests
         
         car.FillTank();
         
-        car.FuelLevel.Should().Be(car.FuelCap);
+        car.FuelLevel.Should().Be(car.FuelCap, "the fuel level should be equal to the fuel cap after refueling because the tank is full.");
     }
     
     [Theory]
