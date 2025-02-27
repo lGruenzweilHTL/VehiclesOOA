@@ -3,13 +3,13 @@ using VehicleModel;
 
 namespace VehicleModelTests;
 
-public class PassengerVehicleTests
+public class MotorizedVehicleTests
 {
     [Fact]
     public void FillTank_OnCalled_FuelLevelIsEqualToFuelCap()
     {
         var vehicle = TestingHelper.VehicleBuilder.Start()
-            .BuildCar() as PassengerVehicle;
+            .BuildCar() as MotorizedVehicle;
         
         vehicle.FillTank();
         
@@ -28,7 +28,7 @@ public class PassengerVehicleTests
         var vehicle = TestingHelper.VehicleBuilder.Start()
             .WithSpeed(carBaseSpeed)
             .WithConsumption(carBaseConsumption)
-            .BuildCar() as PassengerVehicle;
+            .BuildCar() as MotorizedVehicle;
         
         var (consumption, time) = vehicle.Drive(distanceKilometer, roadType);
 
@@ -39,5 +39,17 @@ public class PassengerVehicleTests
         time.Should().Be(TimeSpan.FromHours(expectedTimeHours), "the time of the drive should be equal to the expected time.");
         
         vehicle.FuelLevel.Should().Be(vehicle.FuelCap - expectedConsumption, "the fuel level should be equal to remaining fuel in the tank.");
+    }
+    
+    [Fact]
+    public void Drive_GivenDistanceGreaterThanFuelLevel_ReturnsDefault()
+    {
+        var vehicle = TestingHelper.VehicleBuilder.Start()
+            .WithSpeed(100)
+            .WithConsumption(10)
+            .WithFuelCap(10)
+            .BuildCar() as MotorizedVehicle;
+
+        vehicle.Drive(101, RoadType.CityRoad).Should().Be(default);
     }
 }
