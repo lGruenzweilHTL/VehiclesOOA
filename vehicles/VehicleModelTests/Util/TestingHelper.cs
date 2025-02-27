@@ -99,6 +99,11 @@ public class TestingHelper
         {
             return new Car(_make, _model, _year, _speed, _consumption, _fuelCap, _fuelType);
         }
+        
+        public Bicycle BuildBicycle()
+        {
+            return new Bicycle(_make, _model, _year, _speed);
+        }
     }
     
 }
