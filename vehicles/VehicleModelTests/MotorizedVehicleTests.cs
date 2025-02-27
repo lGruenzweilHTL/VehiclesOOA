@@ -1,5 +1,6 @@
 ﻿using FluentAssertions;
 using VehicleModel;
+using Xunit;
 
 namespace VehicleModelTests;
 
