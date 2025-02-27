@@ -59,4 +59,9 @@ public abstract class MotorizedVehicle : Vehicle
         FuelLevel -= consumption;
         return (consumption, time);
     }
+
+    public override string ToString()
+    {
+        return base.ToString() + $" and {FuelLevel:F2}/{FuelCap:F2}L of {FuelType}";
+    }
 }

@@ -2,5 +2,10 @@ namespace VehicleModel;
 
 public class GasStation : FuelStation
 {
-    public override FuelType[] AvailableFuelTypes { get; protected set; } = [FuelType.Gasoline, FuelType.Diesel];
+    public GasStation() : base(FuelType.Gasoline, FuelType.Diesel)
+    {
+    }
+    public GasStation(params FuelType[] fuelTypes) : base(fuelTypes.Where(t => t != FuelType.Electric).ToArray())
+    {
+    }
 }

@@ -39,4 +39,9 @@ public abstract class Vehicle
             _ => throw new ArgumentOutOfRangeException(nameof(roadType), "Invalid road type: " + roadType)
         };
     }
+
+    public override string ToString()
+    {
+        return $"{Make} {Model} ({Year}) with a base speed of {Speed} km/h";
+    }
 }

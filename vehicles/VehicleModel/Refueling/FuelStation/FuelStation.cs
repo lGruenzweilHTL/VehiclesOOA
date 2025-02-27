@@ -4,7 +4,12 @@ namespace VehicleModel;
 
 public abstract class FuelStation
 {
-    public abstract FuelType[] AvailableFuelTypes { get; protected set; }
+    public FuelType[] AvailableFuelTypes { get; protected set; }
+
+    protected FuelStation(params FuelType[] fuelTypes)
+    {
+        AvailableFuelTypes = fuelTypes;
+    }
 
     /// <summary>
     /// Refuels a vehicle to full capacity instantly.
