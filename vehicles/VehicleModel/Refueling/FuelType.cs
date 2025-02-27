@@ -2,5 +2,5 @@ namespace VehicleModel;
 
 public enum FuelType
 {
-    Gasoline, Electric
+    Gasoline, Diesel, Electric
 }
