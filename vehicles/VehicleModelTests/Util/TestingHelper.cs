@@ -20,12 +20,6 @@ public class TestingHelper
                     _ => 1
                 };
             }
-
-            
-            public const double CityRoad = 0.6;
-            public const double Highway = 1.2;
-            public const double Backroad = 0.9;
-            public const double Offroad = 0.5;
         }
 
         public class ConsumptionMultiplier
@@ -41,13 +35,9 @@ public class TestingHelper
                     _ => 1
                 };
             }
-            
-            public const double CityRoad = 1.2;
-            public const double Highway = 0.8;
-            public const double Backroad = 1.1;
-            public const double Offroad = 1.5;
         }
     }
+    
     public class VehicleBuilder
     {
         private string _make = "VM";
@@ -105,13 +95,9 @@ public class TestingHelper
             return this;
         }
         
-        public PassengerVehicle BuildCar()
+        public Car BuildCar()
         {
             return new Car(_make, _model, _year, _speed, _consumption, _fuelCap, _fuelType);
-        }
-        public PassengerVehicle BuildTruck()
-        {
-            return new Truck(_make, _model, _year, _speed, _consumption, _fuelCap, _fuelType);
         }
     }
     

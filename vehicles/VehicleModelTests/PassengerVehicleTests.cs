@@ -8,12 +8,12 @@ public class PassengerVehicleTests
     [Fact]
     public void FillTank_OnCalled_FuelLevelIsEqualToFuelCap()
     {
-        var car = TestingHelper.VehicleBuilder.Start()
-            .BuildCar();
+        var vehicle = TestingHelper.VehicleBuilder.Start()
+            .BuildCar() as PassengerVehicle;
         
-        car.FillTank();
+        vehicle.FillTank();
         
-        car.FuelLevel.Should().Be(car.FuelCap, "the fuel level should be equal to the fuel cap after refueling because the tank is full.");
+        vehicle.FuelLevel.Should().Be(vehicle.FuelCap, "the fuel level should be equal to the fuel cap after refueling because the tank is full.");
     }
     
     [Theory]
@@ -25,19 +25,19 @@ public class PassengerVehicleTests
     [InlineData(27, 10, 2, RoadType.Highway)]
     public void Drive_GivenConstructionAndDrivingParams_ReturnsCorrectConsumptionAndTimeAndSetsValues(double distanceKilometer, double carBaseConsumption, double carBaseSpeed, RoadType roadType)
     {
-        var car = TestingHelper.VehicleBuilder.Start()
+        var vehicle = TestingHelper.VehicleBuilder.Start()
             .WithSpeed(carBaseSpeed)
             .WithConsumption(carBaseConsumption)
-            .BuildCar();
+            .BuildCar() as PassengerVehicle;
         
-        var (consumption, time) = car.Drive(distanceKilometer, roadType);
+        var (consumption, time) = vehicle.Drive(distanceKilometer, roadType);
 
-        var expectedConsumption = carBaseConsumption * TestingHelper.Constants.ConsumptionMultiplier.GetConsumptionMultiplier(roadType);
+        var expectedConsumption = (carBaseConsumption * TestingHelper.Constants.ConsumptionMultiplier.GetConsumptionMultiplier(roadType) / 100) * distanceKilometer;
         var expectedTimeHours = carBaseSpeed == 0 ? 0 : distanceKilometer / (carBaseSpeed * TestingHelper.Constants.SpeedMultiplier.GetSpeedMultiplier(roadType));        
         
         consumption.Should().Be(expectedConsumption, "the consumption of the drive should be equal to the expected consumption.");
         time.Should().Be(TimeSpan.FromHours(expectedTimeHours), "the time of the drive should be equal to the expected time.");
         
-        car.FuelLevel.Should().Be(car.FuelCap - expectedConsumption, "the fuel level should be equal to remaining fuel in the tank.");
+        vehicle.FuelLevel.Should().Be(vehicle.FuelCap - expectedConsumption, "the fuel level should be equal to remaining fuel in the tank.");
     }
 }
