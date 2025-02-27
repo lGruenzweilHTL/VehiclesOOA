@@ -105,9 +105,13 @@ public class TestingHelper
             return this;
         }
         
-        public PassengerVehicle BuildPassengerVehicle()
+        public PassengerVehicle BuildCar()
         {
-            return new PassengerVehicle(_make, _model, _year, _speed, _consumption, _fuelCap, _fuelType);
+            return new Car(_make, _model, _year, _speed, _consumption, _fuelCap, _fuelType);
+        }
+        public PassengerVehicle BuildTruck()
+        {
+            return new Truck(_make, _model, _year, _speed, _consumption, _fuelCap, _fuelType);
         }
     }
     

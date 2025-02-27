@@ -1,5 +1,3 @@
-using System;
-
 namespace VehicleModel;
 
 public abstract class MotorizedVehicle : Vehicle
@@ -39,5 +37,26 @@ public abstract class MotorizedVehicle : Vehicle
             RoadType.Offroad => 1.5,
             _ => throw new ArgumentOutOfRangeException(nameof(roadType), "Invalid road type: " + roadType)
         };
+    }
+    
+    public override (double consumption, TimeSpan time) Drive(double distanceKilometer, RoadType roadType)
+    {
+        if (distanceKilometer <= 0 || Speed <= 0)
+        {
+            return default;
+        }
+        
+        var scaledSpeed = GetScaledSpeed(roadType);
+        var time = TimeSpan.FromHours(distanceKilometer / scaledSpeed);
+        
+        var consumption = distanceKilometer / 100f * GetScaledConsumption(roadType);
+        
+        if (consumption > FuelLevel)
+        {
+            return default;
+        }
+        
+        FuelLevel -= consumption;
+        return (consumption, time);
     }
 }

@@ -9,7 +9,7 @@ public class PassengerVehicleTests
     public void FillTank_OnCalled_FuelLevelIsEqualToFuelCap()
     {
         var car = TestingHelper.VehicleBuilder.Start()
-            .BuildPassengerVehicle();
+            .BuildCar();
         
         car.FillTank();
         
@@ -28,7 +28,7 @@ public class PassengerVehicleTests
         var car = TestingHelper.VehicleBuilder.Start()
             .WithSpeed(carBaseSpeed)
             .WithConsumption(carBaseConsumption)
-            .BuildPassengerVehicle();
+            .BuildCar();
         
         var (consumption, time) = car.Drive(distanceKilometer, roadType);
 
